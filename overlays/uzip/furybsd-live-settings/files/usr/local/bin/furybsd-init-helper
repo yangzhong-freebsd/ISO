@@ -84,7 +84,6 @@ fi
 /usr/sbin/sysrc -f /etc/rc.conf ifconfig_DEFAULT="SYNCDHCP accept_rtadv"
 /usr/sbin/sysrc -f /etc/rc.conf ipv6_activate_all_interfaces="YES"
 /usr/sbin/sysrc -f /etc/rc.conf dhclient_program="/usr/local/sbin/dual-dhclient"
-/usr/sbin/sysrc -f /etc/rc.conf dhcpcd_enable="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf webcamd_enable="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf avahi_daemon_enable="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf ntpd_enable="NO" >/dev/null 2>/dev/null # Seems to conflict with ntpdate
