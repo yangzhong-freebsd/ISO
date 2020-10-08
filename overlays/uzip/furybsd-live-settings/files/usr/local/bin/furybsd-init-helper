@@ -80,10 +80,11 @@ fi
 /usr/sbin/sysrc -f /etc/rc.conf linux_enable="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf dbus_enable="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf kld_list+="cuse ig4 iicbus iichid utouch" >/dev/null 2>/dev/null
-/usr/sbin/sysrc -f /etc/rc.conf allscreens_kbdflags="-b quiet.off"
-/usr/sbin/sysrc -f /etc/rc.conf ifconfig_DEFAULT="SYNCDHCP accept_rtadv"
-/usr/sbin/sysrc -f /etc/rc.conf ipv6_activate_all_interfaces="YES"
-/usr/sbin/sysrc -f /etc/rc.conf dhclient_program="/usr/local/sbin/dual-dhclient"
+/usr/sbin/sysrc -f /etc/rc.conf allscreens_kbdflags="-b quiet.off" >/dev/null 2>/dev/null
+/usr/sbin/sysrc -f /etc/rc.conf ifconfig_DEFAULT="SYNCDHCP accept_rtadv" >/dev/null 2>/dev/null
+/usr/sbin/sysrc -f /etc/rc.conf ipv6_activate_all_interfaces="YES" >/dev/null 2>/dev/null
+/usr/sbin/sysrc -f /etc/rc.conf dhclient_program="/usr/local/sbin/dual-dhclient" >/dev/null 2>/dev/null
+/usr/sbin/sysrc -f /etc/rc.conf background_dhclient="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf webcamd_enable="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf avahi_daemon_enable="YES" >/dev/null 2>/dev/null
 /usr/sbin/sysrc -f /etc/rc.conf ntpd_enable="NO" >/dev/null 2>/dev/null # Seems to conflict with ntpdate
