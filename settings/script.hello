@@ -10,7 +10,7 @@ mkdir -p /tmp/system-overlay
 cd /tmp/system-overlay
 
 # gmenudbusmenuproxy; the one packaged in FreeBSD pulls in way too many dependencies
-wget "https://github.com/helloSystem/ISO/releases/download/untagged-ad5719eff056750873a1/gmenudbusmenuproxy"
+wget "https://github.com/helloSystem/ISO/releases/download/assets/gmenudbusmenuproxy"
 chmod +x gmenudbusmenuproxy
 mv gmenudbusmenuproxy "${uzip}/usr/local/bin/"
 
