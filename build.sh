@@ -3,7 +3,7 @@
 # Exit on errors
 set -e
 
-version="12.2-RELEASE"
+version="13.0-CURRENT"
 # pkgset="branches/2020Q1" # TODO: Use it
 desktop=$1
 tag=$2
