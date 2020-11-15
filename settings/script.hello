@@ -90,5 +90,5 @@ cp "${uzip}"/usr/local/share/applications/fury-config-xorg.desktop .
 cd "${uzip}/Applications/Utilities"
 cp "${uzip}"/usr/local/share/applications/freebsd-install.desktop .
 cp "${uzip}"/usr/local/share/applications/org.kde.ark.desktop .
-cp "${uzip}"/usr/local/share/applications/org.kde.systemmonitor.desktop .
+# cp "${uzip}"/usr/local/share/applications/org.kde.systemmonitor.desktop .
 cp "${uzip}"/usr/local/share/applications/qterminal.desktop .
