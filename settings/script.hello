@@ -9,6 +9,11 @@ set -x
 mkdir -p /tmp/system-overlay
 cd /tmp/system-overlay
 
+# gmenudbusmenuproxy; the one packaged in FreeBSD pulls in way too many dependencies
+wget "https://github.com/helloSystem/ISO/releases/download/untagged-ad5719eff056750873a1/gmenudbusmenuproxy"
+chmod +x gmenudbusmenuproxy
+mv gmenudbusmenuproxy "${uzip}/usr/local/bin/"
+
 # Wallpaper
 # TODO: Also check
 # https://papers.co/desktop/vg41-ribbon-abstract-art-blue-pattern/
@@ -28,7 +33,7 @@ rm -f QtPlugin_FreeBSD.zip
 rm -rf QtPlugin/
 wget https://raw.githubusercontent.com/helloSystem/QtPlugin/master/stylesheet.qss
 mkdir -p "${uzip}/usr/local/etc/xdg/"
-sudo mv stylesheet.qss "${uzip}/usr/local/etc/xdg/"
+mv stylesheet.qss "${uzip}/usr/local/etc/xdg/"
 
 # launch
 wget https://github.com/helloSystem/launch/releases/download/continuous/launch_FreeBSD.zip
