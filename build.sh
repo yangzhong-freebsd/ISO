@@ -266,7 +266,7 @@ boot()
 {
   cp -R "${cwd}/overlays/boot/" "${cdroot}"
   cd "${uzip}" && tar -cf - --exclude boot/kernel boot | tar -xf - -C "${cdroot}"
-  for kfile in kernel geom_uzip.ko opensolaris.ko tmpfs.ko xz.ko zfs.ko; do
+  for kfile in kernel geom_uzip.ko cryptodev.ko tmpfs.ko xz.ko zfs.ko; do
   tar -cf - boot/kernel/${kfile} | tar -xf - -C "${cdroot}"
   done
   sync ### Needed?
