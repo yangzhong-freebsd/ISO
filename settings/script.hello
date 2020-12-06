@@ -119,7 +119,7 @@ rm -rf qtpad/.git
 cp qtpad/Resources/icons/qtpad.svg "qtpad/Resources/Sticky Notes.svg"
 convert -resize 256x256 "qtpad/Resources/Sticky Notes.svg" "qtpad/Resources/Sticky Notes.png"
 mv qtpad/ "Sticky Notes.app"
-mv "Sticky Notes.app" "${uzip}"/Applications
+mv "Sticky Notes.app" "${uzip}"/Applications/Utilities
 
 # Fonts
 wget https://github.com/ArtifexSoftware/urw-base35-fonts/archive/20200910.zip
@@ -190,3 +190,4 @@ umount ${uzip}/dev
 mkdir -p "${uzip}/Applications/Autostart/"
 chmod g+w "${uzip}/Applications/Autostart/"
 ( cd "${uzip}/Applications/Autostart/" ; ln -s ../Utilities/BuildNotify.app . )
+( cd "${uzip}/Applications/Autostart/" ; ln -s ../Utilities/"Sticky Notes.app" . )
