@@ -141,6 +141,13 @@ mv Lector.app/* Lector.app/Resources 2>/dev/null || true
 cp Lector.app/Resources/lector/resources/raw/Lector.png Lector.app/Resources/
 mv Lector.app "${uzip}"/Applications
 
+git clone --branch liveuser https://github.com/yangzhong-freebsd/lua-httpd
+mv lua-httpd "${uzip}"/Applications
+touch "${uzip}"/Applications/lua-httpd/db
+echo "http	stream	tcp	nowait	root	/Applications/lua-httpd/httpd	httpd" >> "${uzip}"/etc/inetd.conf
+echo 'inetd_enable="YES"' >> "${uzip}"/etc/rc.conf
+touch /var/log/httpd.log
+
 # Sticky Notes.app
 # Requires: py37-qt5-dbus
 git clone https://gitlab.com/william.belanger/qtpad --depth 1
