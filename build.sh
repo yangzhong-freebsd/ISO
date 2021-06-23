@@ -170,6 +170,10 @@ base()
     fetch https://download.freebsd.org/ftp/${FTPDIRECTORY}/${arch}/${version}/kernel.txz
   fi
   cd ${base}
+  mkdir ${uzip}/usr
+  mkdir ${uzip}/usr/freebsd-dist
+  cp base.txz ${uzip}/usr/freebsd-dist
+  cp kernel.txz ${uzip}/usr/freebsd-dist
   tar -zxvf base.txz -C ${uzip}
   tar -zxvf kernel.txz -C ${uzip}
   touch ${uzip}/etc/fstab
