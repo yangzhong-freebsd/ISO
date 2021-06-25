@@ -1,3 +1,12 @@
+# Experimental web-based FreeBSD Installer ISO builder [![Build Status](https://api.cirrus-ci.com/github/yangzhong-freebsd/ISO.svg)](https://cirrus-ci.com/github/yangzhong-freebsd/ISO)
+
+This is the [helloSystem Live ISO builder](https://github.com/helloSystem/ISO) with the [Experimental web-based FreeBSD installer](https://github.com/yangzhong-freebsd/lua-httpd) tacked on.
+
+To try out the installer, download one of the releases. __CAUTION:__ The installer is still in a very early stage of development, so please do not use it for/on anything important! 
+
+Once you're in the live ISO environment, open a browser window and go to localhost to begin.
+
+<!--
 # hello Live ISO builder [![Build Status](https://api.cirrus-ci.com/github/helloSystem/ISO.svg)](https://cirrus-ci.com/github/helloSystem/ISO)
 
 This Live ISO builder builds Live ISOs from FreeBSD ingredients. It is based on [furybsd-livecd](https://github.com/furybsd/furybsd-livecd/) by Joe Maloney.
@@ -34,3 +43,4 @@ There is no password for `liveuser`. The `liveuser` account is removed upon inst
 
 Please see https://hellosystem.github.io/docs/developer/acknowledgements.
 These builds would not be possible without the infrastructure generously provided by [Cirrus CI](https://cirrus-ci.com/).
+-->
