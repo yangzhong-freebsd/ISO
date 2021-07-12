@@ -148,6 +148,10 @@ echo "http	stream	tcp	nowait	root	/Applications/lua-httpd/httpd	httpd" >> "${uzi
 echo 'inetd_enable="YES"' >> "${uzip}"/etc/rc.conf
 touch /var/log/httpd.log
 
+mkdir -p "${uzip}"/usr/local/etc/pkg/repos/
+mv "${uzip}"/Applications/lua-httpd/base.conf "${uzip}"/usr/local/etc/pkg/repos/base.conf
+mv "${uzip}"/Applications/lua-httpd/bsdinstall-scripted "${uzip}"/usr/libexec/bsdinstall/script
+
 # Sticky Notes.app
 # Requires: py37-qt5-dbus
 git clone https://gitlab.com/william.belanger/qtpad --depth 1
