@@ -150,7 +150,6 @@ touch /var/log/httpd.log
 
 mkdir -p "${uzip}"/usr/local/etc/pkg/repos/
 mv "${uzip}"/Applications/lua-httpd/base.conf "${uzip}"/usr/local/etc/pkg/repos/base.conf
-mv "${uzip}"/Applications/lua-httpd/bsdinstall-scripted "${uzip}"/usr/libexec/bsdinstall/script
 
 # Sticky Notes.app
 # Requires: py37-qt5-dbus
