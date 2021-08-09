@@ -6,7 +6,7 @@ libdbusmenu-qt5
 # Required for gmenudbusmenuproxy
 kf5-kcoreaddons
 # Required for Ctrl-C and friends to work when the language is set to e.g., German; https://github.com/helloSystem/ISO/issues/9
-qt5-l10n
+# qt5-l10n
 # Required for the Dock
 qt5-graphicaleffects
 # Make menus of Gtk applications accessible by the Menu application
@@ -24,7 +24,7 @@ dunst
 # Qt audio mixer for FreeBSD
 dsbmixer
 # Adjust the color temperature of your screen
-redshift
+# redshift
 # FreeBSD's devd(8) based automount solution, https://github.com/vermaden/automount
 automount
 # Small, fast, standards compliant, extensible window manager
@@ -58,7 +58,7 @@ dbus
 # But we need /usr/local/share/qtermwidget5 until QTerminal.app is made properly; https://github.com/helloSystem/ISO/issues/190
 qtermwidget
 # Lightweight Qt5 plain-text editor
-featherpad
+# featherpad
 # GTK module for putting application menubar in a global menubar
 # gtk-app-menu
 # XRandR GUI
@@ -66,11 +66,11 @@ arandr
 # PDF viewer (uses the Poppler library)
 qpdfview
 # GUI to set up printers. TODO: Find Qt-based system-config-printer replacement
-system-config-printer
+# system-config-printer
 # hplip is apparently needed for non-network HP printers; https://github.com/helloSystem/ISO/issues/225
 hplip
 # cups-pdf is needed to print PDFs
-cups-pdf
+# cups-pdf
 # The 'desktop2app' command needs py37-xdg
 devel/py-xdg
 # The 'desktop2app' command needs py37-psutil for watching the filesystem
@@ -80,7 +80,7 @@ fusefs-unionfs
 # Force-quit applications using Ctrl-Alt-Esc
 xkill
 # Take screenshots; FIXME: Replace by ksnip once it does not segfault anymore
-lximage-qt
+# lximage-qt
 # Required for BuildNotify.app
 devel/py-dateutil
 devel/py-pytz
@@ -90,15 +90,15 @@ devel/py-pytz
 x11vnc
 net/py-qt5-network
 # Required for Lector.app
-devel/py-xmltodict
-www/py-beautifulsoup
-databases/py-sqlite3
+# devel/py-xmltodict
+# www/py-beautifulsoup
+# databases/py-sqlite3
 # Required for Sticky Notes.app
-devel/py-qt5-dbus
+# devel/py-qt5-dbus
 # For convenience in addition to the curl that comes with FreeBSD base
 wget
 # We need a video player
-mpv
+# mpv
 # Required for Remote Assistance
 ssvnc
 # Required for swapping Ctrl and Alt

@@ -54,7 +54,7 @@ export cdroot="${livecd}/cdroot"
 ramdisk_root="${cdroot}/data/ramdisk"
 vol="furybsd"
 label="LIVE"
-export DISTRIBUTIONS="kernel.txz base.txz"
+export DISTRIBUTIONS="kernel.txz base.txz src.txz"
 
 # Only run as superuser
 if [ "$(id -u)" != "0" ]; then
@@ -169,6 +169,11 @@ base()
     cd ${base}
     fetch https://download.freebsd.org/ftp/${FTPDIRECTORY}/${arch}/${version}/kernel.txz
   fi
+
+  if [ ! -f "${base}/src.txz" ] ; then
+    cd ${base}
+    fetch https://download.freebsd.org/ftp/${FTPDIRECTORY}/${arch}/${version}/src.txz
+  fi
   cd ${base}
   mkdir ${uzip}/usr
   mkdir ${uzip}/usr/freebsd-dist
@@ -176,6 +181,7 @@ base()
   #cp kernel.txz ${uzip}/usr/freebsd-dist
   tar -zxvf base.txz -C ${uzip}
   tar -zxvf kernel.txz -C ${uzip}
+  tar -zxvf src.txz -C ${uzip}
   touch ${uzip}/etc/fstab
 }
 
